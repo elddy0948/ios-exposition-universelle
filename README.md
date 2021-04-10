@@ -1,33 +1,27 @@
-## iOS 커리어 스타터 캠프
+# 만국 박람회 (Dec 21, 2020 ~ Dec 29, 2020)
 
-### 만국박람회 프로젝트 저장소
+| Name                                  | Language                                                     |
+| ------------------------------------- | ------------------------------------------------------------ |
+| [Joons](https://github.com/elddy0948) | <img width="200" alt="Swift" src="https://user-images.githubusercontent.com/40102795/114259983-f7a4f480-9a0c-11eb-8f57-2da635febfd9.png"> |
 
-## 팀그라운드 룰
 
-### [나만의 규칙]
- - 10시 까지는 꼭 책상에 앉아있기.
- - 전날에 공부하여 알게 된 것은 꼭 여전히 알고있는지 체크하기.
- - 최선을 다하기!
- 
- ### [스크럼 규칙]
-  - 컨디션 체크
-  - 어제 공부 했던것 체크
-  - 오늘 할 일 정리하기
-  - 궁금한 부분 생기면 Bam에게 물어보기!
- 
-### [프로젝트 규칙] 
-  - 브랜치 규칙 : 닉네임 / 스텝
-      ex ) joons/Step1
-   - 커밋 규칙
-      - add : 타입이나 파일을 추가
-      - refactor : 기능 수정
-      - feat : 기능 구현
-      - fix : 버그 수정
-      - style: 기능이나 로직에 관련없는 오탈자 등 수정
-      - 알아보기 쉬운 커밋 메시지 작성하기
 
-### [코딩 컨벤션]
- - 함수는 동사 변수나 상수는 명사 이름
- - Naming에 주의!
 
-힘내기👍
+
+## 프로젝트 설명
+
+- Code로 UI 구성
+- UIScrollView
+- UIStackView
+- UITableView
+- Codable 프로토콜, CodingKey
+- JSONDecoder
+
+
+
+## Screen
+
+![2021-04-10 15 48 11](https://user-images.githubusercontent.com/40102795/114261180-2ffc0100-9a14-11eb-8ba2-c039f9f6ea78.gif)![2021-04-10 15 50 39](https://user-images.githubusercontent.com/40102795/114261250-8c5f2080-9a14-11eb-86b9-da0ed4caba02.gif)
+
+
+
