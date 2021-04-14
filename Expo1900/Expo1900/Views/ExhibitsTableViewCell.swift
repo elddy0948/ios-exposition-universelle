@@ -42,7 +42,7 @@ class ExhibitsTableViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .label
         label.textAlignment = .left
-        label.font = .boldSystemFont(ofSize: 20)
+        label.font = .preferredFont(forTextStyle: .title2)
         return label
     }()
     
@@ -51,7 +51,7 @@ class ExhibitsTableViewCell: UITableViewCell {
         label.numberOfLines = 0
         label.textColor = .label
         label.textAlignment = .left
-        label.font = .boldSystemFont(ofSize: 15)
+        label.font = .preferredFont(forTextStyle: .caption1)
         return label
     }()
     
@@ -79,11 +79,12 @@ class ExhibitsTableViewCell: UITableViewCell {
     
     //MARK: - private
     private func setupConstraints() {
+        let padding: CGFloat = 8.0
         var constraints = [NSLayoutConstraint]()
-        constraints.append(exhibitStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor))
-        constraints.append(exhibitStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor))
-        constraints.append(exhibitStackView.topAnchor.constraint(equalTo: contentView.topAnchor))
-        constraints.append(exhibitStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor))
+        constraints.append(exhibitStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding))
+        constraints.append(exhibitStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding))
+        constraints.append(exhibitStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding))
+        constraints.append(exhibitStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding))
         NSLayoutConstraint.activate(constraints)
     }
     
