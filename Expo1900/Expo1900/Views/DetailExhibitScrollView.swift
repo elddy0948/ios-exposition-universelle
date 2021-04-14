@@ -20,21 +20,9 @@ class DetailExhibitScrollView: UIScrollView {
         return stackView
     }()
     
-    private let exhibitImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        return imageView
-    }()
+    private let exhibitImageView = ExpositionImageView(frame: .zero)
     
-    private let exhibitDescriptionLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textColor = .label
-        label.font = .monospacedDigitSystemFont(ofSize: 15, weight: .regular)
-        return label
-    }()
+    private let exhibitDescriptionLabel = DescriptionLabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

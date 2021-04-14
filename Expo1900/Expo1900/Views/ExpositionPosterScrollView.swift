@@ -34,12 +34,7 @@ class ExpositionPosterScrollView: UIScrollView {
         return label
     }()
     
-    private let posterImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
-    }()
+    private let posterImageView = ExpositionImageView(frame: .zero)
     
     private let expositionInformationsLabel: UILabel = {
         let label = UILabel()
@@ -50,13 +45,7 @@ class ExpositionPosterScrollView: UIScrollView {
         return label
     }()
     
-    private let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.textColor = .label
-        label.font = .monospacedDigitSystemFont(ofSize: 15, weight: .regular)
-        return label
-    }()
+    private let descriptionLabel = DescriptionLabel()
     
     private let showKoreaExhibitStackView: UIStackView = {
         let stackView = UIStackView()
