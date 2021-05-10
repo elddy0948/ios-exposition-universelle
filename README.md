@@ -10,6 +10,8 @@
 
 ## 프로젝트 설명
 
+JSON 파일에 있는 정보를 JSONDecoder를 활용해 각각 ScrollView와 TableView에 나타내어 주는 토이 프로젝트입니다. 
+
 - Code로 UI 구성
 - UIScrollView
 - UIStackView
@@ -23,22 +25,30 @@
 
 - ExpositionPosterScrollView와 DetailExpositionScrollView에서 설명을 나타내는 Label과 해당 이미지를 나타내는 ImageView는 CustomView로 만들어 사용할 수 있게 리팩토링
 
-- 설명을 나타내는 DescriptionLabel의 폰트를 Dynamic Type으로 변경 
+- 글자수가 많고, 어떠한 설명이 들어가는 글이므로 Dynamic Type의 필요성.
 
   - ```swift
     font = .preferredFont(forTextStyle: .caption1)
     adjustsFontForContentSizeCategory = true
     ```
 
-- 
+  - https://developer.apple.com/documentation/uikit/uifont/scaling_fonts_automatically 참고
 
 
 
+## 🧐 고민한 점
 
+- ✅ Assets.xcassets에 포함되어 있는 Dataset을 불러오는 방법? 
 
-## Screen
+  - ```swift
+    let data = NSDataAsset(name: "exposition_universelle_1900")?.data
+    ```
 
-![2021-04-10 15 48 11](https://user-images.githubusercontent.com/40102795/114261180-2ffc0100-9a14-11eb-8ba2-c039f9f6ea78.gif)![2021-04-10 15 50 39](https://user-images.githubusercontent.com/40102795/114261250-8c5f2080-9a14-11eb-86b9-da0ed4caba02.gif)
+    NSDataAsset을 활용하여 Data 타입으로 가져와서 
 
+    ```swift
+    let expositionInformation = try JSONDecoder().decode(Exposition.self, from: data)
+    ```
 
+    JSONDecoder()로 decode 시켜주었다!
 
